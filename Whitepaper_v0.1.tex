@@ -14,9 +14,6 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-\title{Technical Whitepaper}
-\author{Romain Destenay}
-
 \setcounter{secnumdepth}{2}
 \renewcommand{\thesection}{\Roman{section}} 
 \renewcommand{\thesubsection}{\arabic{subsection}}
@@ -29,7 +26,7 @@
 	\vspace{1.5cm}
 	{\huge\bfseries The OSE Ecosystem,\\ Backbone of the sharing economy\par}
 	\vspace{2cm}
-	{\Large\itshape Romain Destenay,\par Conrad Lelubre\par}
+	{\Large\itshape Romain Destenay,\par Conrad Lelubre,\par Julien Leroy\par}
 	\vspace{2cm}
 
 \begin{abstract}
@@ -59,29 +56,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \subsection{Bitcoin and Blockchains}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\begin{itemize}
+\item Context: Revolution in finance after 2008 crisis
+\item Decentralized, distributed, no single point of failure, no unilateral decision, no government control
+\item Underlying tech: the blockchain. <<Details>>
+\end{itemize}
 
 \subsection{Ethereum and Smart Contracts}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\begin{itemize}
+\item State-transition, turing complete language + VM
+\item Smart contracts
+\item ICOs and ERC20
+\item Potential applications of smart contracts 
+\item DAOs 
+\end{itemize}
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\subsection{Challenges with Blockchains}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Limitations and challenges with Blockchains}
 
 \subsubsection{Proof of Work and the Environment}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\begin{itemize}
+\item Stats on bitcoin electricity consumption
+\item Failure of PoW
+\item Alternatives to PoW (PoS, PoA, DPoS, Master Nodes)
+\end{itemize}
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\subsubsection{Mining and Fees}
+\subsubsection{Mining, validation time and Fees}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -95,17 +96,15 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 \subsection{Directed Acyclic Graphs (DAGs)}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+As a solution to these problems, new distributed ledger structure emerged to replace blockchain, DAGs. Most notable ones bein Iota's tangle and Nano's block-lattice. 
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\subsubsection{IOTA and the Tangle}
+\subsubsection{Iota and the Tangle}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\subsubsection{Nano and the Block-lattice structure}
+\subsubsection{Nano and the Block-lattice Structure}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -191,9 +190,7 @@ KYC?:
 
 Privacy achieved by ?? , necessary for example for restaurant to not learn about their competitors gross income through the ledger
 
-\subsection{Fiat income guarantee}
-
-\subsubsection{Fiat Conversion}
+\subsection{Fiat Conversion}
 
 \begin{itemize}
 \item Decentralized exchange with JCash, USDT, TUSD?
@@ -202,22 +199,29 @@ Privacy achieved by ?? , necessary for example for restaurant to not learn about
 \item Using centralized exchanges (Binance, Bitstamps, ?)
 \end{itemize}
 
-\subsubsection{Hedging Nodes and Contracts (with Oracle)}
+\subsection{Master Nodes}
 
-Hedging nodes / contracts
+\subsubsection{Hedging and Future Contracts}
+
 \begin{itemize}
 \item Some participant can help the network by running such a node.
-\item It automatically <<how?>> accepts future contracts (cf Ethererum Whitepaper) in order to provide insurrance to the user that he'll get the same amount of value in the end. Hedge nodes are rewarded for accepting contracts.
+\item It automatically <<how?>> accepts future contracts (cf Ethererum Whitepaper) in order to provide insurrance to the user that he'll get the same amount of value in the end. Hedge nodes are rewarded for accepting contracts (1.5\%?).
 \item Contracts must have the ability to be chained
-\item 
 \end{itemize}
+
+\subsubsection{Oracles?}
 
 Oracles necessary if no DEX, otherwise just read the price on the DEX
 
+\subsubsection{Voting?}
+
+
+
 \subsection{Referer}
 
-A referer associated to each account with KYC.
-Default, or no KYC = OSE Foundation.
+A referer associated to each account.
+Possibility to change referer after KYC approval.
+Default = OSE Foundation.
 
 As much token given to referer as burnt.
 
@@ -226,6 +230,8 @@ As much token given to referer as burnt.
 \section{Modular Applications in Details}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\newpage
 
 \section{BlockFood: A Proof of Concept}
 
